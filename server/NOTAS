@@ -1,0 +1,44 @@
+
+CREANDO EL SERVIDOR DE NODEJS
+primero en la ubicacion del proyecto
+en la consola:
+npm init --yes
+nos creara el package.json
+
+-luego instalar el framework de node llamado express para
+crear el servidor ...este es un modulo popular sin tener que 
+crear yo todo desde cero    
+-luego tammbien instalaremso el modulo morgan... este es 
+para que nosotros podamos ir viendo en consola lo que las 
+aplicaciones cloente nos van pidiendo para tener idea de lo que 
+esta pasando y si esta haciendo las peticiones o no
+- a continuacion tambien vamos intalar el modulo mysql para
+conectar nodeJs con mysql ojo que este no es la base de datos
+solo es el modulo de conexion...de hecho hoy no vamos a utilizar
+mysql sino una variacion llamado promise-mysql---- este modulo le 
+da soporte a mysql con promesas 
+- adicional m¡vamos instalar el modulo cors ... nos permite comunicar
+dos servidores por ejemplo angular se va tener que comunicar con el RESTAPI
+y con cors nos facilita en una sola linea de codigo
+-BIEN nos creara una carpeta node_modules y no tenemos que tocarla nada
+npm i express morgan promise-mysql cors
+
+-voy a crear carpeta src donde voy a colocar todo el codigo de nuestra aplicacion
+-dentro de src creamos el index.ts 
+-para ello tenemso que instalar el typescript (nm install -g typescript)
+-tenemos que crear un archivo de configuracion  propia
+para lo cual en la consola escribimos (tsc --init) y se cerara tsconfig.jso
+....en su linea de codigo cambiaremos la version de es5 a es6 
+...descomentaremos el auDir el cual es la traduccion del ts a Js le adicionamos 
+su ubicacion ./build  ........ ahora si en la consola escribimos (tsc) y se 
+va a crear la carpeta build con su index.js
+-vamos a automatizar la conversion del ts a js...para ello vamos a package.json y 
+dentro del scripts  aumentamos {"build": "tsc -w"} ...en la consola escribimos (npm run build)
+-ahora vamos automatizar el comando node build/index.js...para ello instalamos el 
+modulo nodemon  en la terminal escribimos (npm i nodemon -D) nodemos es una dependecia
+de desarrollo y no de produccion es decir que se inicia cuando desarrollemos y no desplequemos la aplicacion
+... ahora debajo de "build": "tsc -w" incluimos "dev": "nodemon build/insex.js" ....en la consola escribimos (npm run dev)
+
+
+CONFIGURANDO EXPRESS USANDO TYPESCRIPT
+1A vamos a index.ts
