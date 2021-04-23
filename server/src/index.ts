@@ -55,7 +55,7 @@ class Server{
         //15A utilizando ese enrutador
         this.app.use('/',indexRoutes);
         //17A utilizando el enrutador para otra ubicacion
-        this.app.use('/api/inves',invRoutes);
+        this.app.use('/api/invens',invRoutes);
             
     }
     //6A agregando otro metodo start que sera para inicializar el 

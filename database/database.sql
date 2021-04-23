@@ -14,4 +14,4 @@ CREATE TABLE inven(
 
 RENAME TABLE inven to invens;
 
-DESCRIBE inven;
+DESCRIBE invens;

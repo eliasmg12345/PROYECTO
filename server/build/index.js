@@ -50,7 +50,7 @@ class Server {
         //15A utilizando ese enrutador
         this.app.use('/', indexRoutes_1.default);
         //17A utilizando el enrutador para otra ubicacion
-        this.app.use('/api/inves', invRoutes_1.default);
+        this.app.use('/api/invens', invRoutes_1.default);
     }
     //6A agregando otro metodo start que sera para inicializar el 
     //servidor ...para ejecutar el app.listen para que el servidor empiece a escuchar
